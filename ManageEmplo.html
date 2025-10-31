@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <title>إرث</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="page-provider">
+<div class="top-vision">
+  <p>في إرث نسعى للحفاظ على التراث السعودي الأصيل وإبرازه بروحٍ حديثةٍ تجمع بين عبق الماضي وابتكار الحاضر.</p>
+</div>
+
+  <header>
+    <a href="index.html" >
+    <div class="logo-container">
+      <img src="images/erth-logo.png" alt="شعار إرث" class="logo">
+    </div>
+
+    <nav>
+  <ul class="nav-links">
+    <li><a href="provider.html">مزود الخدمة</a></li>
+    <li><a href="services.html">الخدمات</a></li>
+    <li><a href="about.html">من نحن</a></li>
+    <li><a href="client.html">العميل</a></li>
+  </ul>
+</nav>
+
+  </header>
+
+  
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="provider.html">مزود الخدمة </a></li>
+    <li aria-current="page">ادارة الموظفين </li>
+  </ol>
+</nav>
+
+  <!-- ===== محتوى الصفحة ===== -->
+  <main class="provider-employees">
+    <h1>إدارة الموظفين</h1>
+
+    <form class="top-actions" action="" method="post">
+  <button id="editAllBtn" class="edit-btn" type="submit" name="action" value="edit">تعديل</button>
+  <button id="deleteAllBtn" class="delete-btn" type="submit" name="action" value="delete">حذف</button>
+</form>
+
+    <!-- بطاقات الموظفين -->
+    <div class="employeesGrid">
+      <div class="employee-card">
+        <div class="emp-info">
+         <label style="color: rgb(73, 42, 5);">
+          <input type="checkbox" name="deleteEmployee" data-id="001">
+         <strong>الاسم:</strong> خالد النصيبي
+         </label>
+          <p><strong>رقم الموظف:</strong> 001</p>
+          <p><strong>المسمى:</strong> مرشد سياحي</p>
+          <p><strong>القسم:</strong> عسير</p>
+        </div>
+        <img src="images/person.png" alt="صورة الموظف">
+      </div>
+
+      <div class="employee-card">
+        <div class="emp-info">
+         <label style="color: rgb(73, 42, 5);">
+          <input type="checkbox" name="deleteEmployee" data-id="002">
+         <strong>الاسم:</strong> لمى البريدي
+         </label>
+          <p><strong>رقم الموظف:</strong> 002</p>
+          <p><strong>المسمى:</strong> مدربة فنون</p>
+          <p><strong>القسم:</strong> نجد</p>
+        </div>
+        <img src="images/person.png" alt="صورة الموظف">
+      </div>
+
+      <div class="employee-card">
+        <div class="emp-info">
+         <label style="color: rgb(73, 42, 5);">
+          <input type="checkbox" name="deleteEmployee" data-id="003">
+          <strong>الاسم:</strong> سلمان المطعني
+          </label>
+          <p><strong>رقم الموظف:</strong> 003</p>
+          <p><strong>المسمى الوظيفي:</strong> مختص زراعة</p>
+          <p><strong>القسم:</strong> الحجاز</p>
+        </div>
+        <img src="images/person.png" alt="صورة الموظف">
+      </div>
+
+      <div class="employee-card">
+        <div class="emp-info">
+         <label style="color: rgb(73, 42, 5);">
+          <input type="checkbox" name="deleteEmployee" data-id="004">
+          <strong>الاسم:</strong> جميلة الدريس
+          </label>
+          <p><strong>رقم الموظف:</strong> 004</p>
+          <p><strong>المسمى:</strong> الحرف اليدوية</p>
+          <p><strong>القسم:</strong> حياكة التراث</p>
+        </div>
+        <img src="images/person.png" alt="صورة الموظف">
+      </div>
+    </div>
+   
+    <!-- إضافة عضو جديد -->
+    <section class="add-member">
+      <h2>إضافة عضو جديد</h2>
+      <form action="">
+        <div class="form-row">
+          <label>الاسم:</label>
+          <input type="text">
+        </div>
+
+        <div class="form-row">
+          <label>الصورة:</label>
+          <input type="file">
+        </div>
+
+        <div class="form-row">
+          <label>تاريخ الميلاد:</label>
+          <input type="date">
+        </div>
+
+        <div class="form-row">
+          <label>البريد الإلكتروني:</label>
+          <input type="email">
+        </div>
+
+        <div class="form-row">
+          <label>مجال الخبرة:</label>
+          <input type="text">
+        </div>
+
+        <div class="form-row">
+          <label>الشهادات:</label>
+          <input type="text">
+        </div>
+
+        <div class="form-row">
+          <label>المؤهلات:</label>
+          <input type="text">
+        </div>
+
+        <div class="form-row">
+          <label>الراتب:</label>
+          <input type="number">
+        </div>
+
+        <div class="form-row">
+          <label>الهوية:</label>
+          <input type="text">
+        </div>
+
+        <div class="form-row">
+          <label>رقم الهاتف:</label>
+          <input type="text">
+        </div>
+
+        <div class="form-row">
+          <button type="button" class="send-btn">إرسال</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <img src="images/x.png" alt="تويتر" style="margin-top:10px ;">
+      <img src="images/insta.png" alt="إنستغرام" style="margin-top:10px ;">
+      <img src="images/what.png" alt="واتساب" style="margin-top:10px ;">
+    </div>
+    <hr>
+    <h3>
+      <a href="faq.html">الأسئلة الشائعة</a> <br>
+      <a href="contact.html">تواصل معنا</a>
+    </h3>
+    <p class="rights">© 2025 جميع الحقوق محفوظة - موقع إِرث</p>
+  </footer>
+
+</body>
+</html>
