@@ -366,6 +366,106 @@ showAlert(msg, title, function () {
   }
 
   /* =============================================== Aljory =============================================== */
+
+
+
+
+  /* =============================================== Leena =============================================== */
+
+
+
+  var sortSelect = document.getElementById("Leena-sort-by");
+  
+  if (sortSelect) {
+
+    // Show services in random order when the page loads
+    shuffleServices();
+    
+    // Sort again when the user changes the option
+    sortSelect.onchange = function () {
+      sortServices(this.value);
+    };
+  }
+
+  function shuffleServices() {
+    var container = document.querySelector(".Leena-container");
+    var cards = document.querySelectorAll(".Leena-card");
+    
+    var cardsArray = Array.prototype.slice.call(cards);
+	
+    // Random shuffle
+    for (var i = cardsArray.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      container.appendChild(cardsArray[j]);
+    }
+  }
+  
+  // Sort services based on the selected type
+  function sortServices(sortType) {
+    var container = document.querySelector(".Leena-container");
+    var cards = document.querySelectorAll(".Leena-card");
+    var cardsArray = Array.prototype.slice.call(cards);
+	
+    // Switch for the different sort options
+    switch(sortType) {
+      case "name-asc":
+        cardsArray.sort(function(a, b) {
+          var titleA = a.querySelector(".Leena-service-title").textContent;
+          var titleB = b.querySelector(".Leena-service-title").textContent;
+          return titleA.localeCompare(titleB, "ar"); 
+        });
+        break;
+        
+      case "name-desc":
+        cardsArray.sort(function(a, b) {
+          var titleA = a.querySelector(".Leena-service-title").textContent;
+          var titleB = b.querySelector(".Leena-service-title").textContent;
+          return titleB.localeCompare(titleA, "ar");
+        });
+        break;
+        
+      case "price-asc":
+        cardsArray.sort(function(a, b) {
+          var priceA = extractPrice(a.querySelector(".Leena-service-price").textContent);
+          var priceB = extractPrice(b.querySelector(".Leena-service-price").textContent);
+          return priceA - priceB;
+        });
+        break;
+        
+      case "price-desc":
+        cardsArray.sort(function(a, b) {
+          var priceA = extractPrice(a.querySelector(".Leena-service-price").textContent);
+          var priceB = extractPrice(b.querySelector(".Leena-service-price").textContent);
+          return priceB - priceA;
+        });
+        break;
+        
+      case "default":
+        cardsArray.sort(function(a, b) {
+          var allCards = document.querySelectorAll(".Leena-card");
+          var indexA = Array.prototype.indexOf.call(allCards, a);
+          var indexB = Array.prototype.indexOf.call(allCards, b);
+          return indexA - indexB;
+        });
+        break;
+    }
+    
+    // Apply the new order
+    cardsArray.forEach(function(card) {
+      container.appendChild(card);
+    });
+  }
+  
+  // Extract price from text
+  function extractPrice(priceText) {
+    var match = priceText.match(/(\d+)/); 
+    return match ? parseInt(match[1]) : 0;
+  }
+  
+  
+    /* =============================================== Leena =============================================== */
+ 
   
 };
+
 
