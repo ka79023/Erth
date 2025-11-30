@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <title>إرث | مزوّد الخدمة</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+</head>
+<body class="page-provider">
+<div class="top-vision">
+  <p>في إرث نسعى للحفاظ على التراث السعودي الأصيل وإبرازه بروحٍ حديثةٍ تجمع بين عبق الماضي وابتكار الحاضر.</p>
+</div>
+
+<header>
+  <a href="index.html">
+    <div class="logo-container">
+      <img src="images/erth-logo.png" alt="شعار إرث" class="logo">
+    </div>
+  </a>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="provider.html">مزود الخدمة</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="client.html">العميل</a></li>
+    </ul>
+  </nav>
+</header>
+
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li aria-current="page">مزود الخدمة</li>
+  </ol>
+</nav>
+
+<main class="provider-home page-provider">
+  <div class="provider-head">
+    <h1>مزوّد الخدمة</h1>
+    <p class="provider-sub">مرحبًا بك، يمكنك إدارة خدماتك أو إضافة خدمات جديدة بسهولة.</p>
+  </div>
+
+  <!-- أضفت عنوان للقسم عشان التحذير -->
+  <section class="provider-actions">
+    <h2 class="sr-only">إجراءات المزود</h2>
+
+    <a href="newService.html" class="provider-tile add">
+      <span class="tile-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </span>
+      <div class="tile-text">
+        <strong>إضافة خدمة جديدة</strong>
+        <small>أدخل تفاصيل الخدمة وصورتها وسعرها</small>
+      </div>
+    </a>
+
+    <a href="ManageEmplo.html" class="provider-tile staff">
+      <span class="tile-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.67 0-8 1.34-8 4v2h10v-2c0-2.66-5.33-4-8-4zm8 0c-.29 0-.62.02-.97.05C16.79 13.59 18 15.11 18 17v2h6v-2c0-2.66-5.33-4-8-4z" />
+        </svg>
+      </span>
+      <div class="tile-text">
+        <strong>إدارة الموظفين</strong>
+        <small>تحكم في بيانات ومهام فريقك</small>
+      </div>
+    </a>
+  </section>
+
+  <section class="provider-services cardish">
+    <div class="section-head">
+      <h2>الخدمات المقدّمة</h2>
+      <p>استعرض الخدمات المتاحة حالياً لعملائك.</p>
+    </div>
+        <ul class="service-list" id="remas-service-list"> </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-titles"></div>
+
+  <div class="social-icons">
+    <img src="images/x.png" alt="تويتر" style="margin-top:10px;">
+    <img src="images/insta.png" alt="إنستغرام" style="margin-top:10px;">
+    <img src="images/what.png" alt="واتساب" style="margin-top:10px;">
+  </div>
+  <hr>
+  <h3>
+    <a href="#">الأسئلة الشائعة</a> <br>
+    <a href="#">تواصل معنا</a>
+  </h3>
+  <div class="footer-bottom">
+    <p class="rights">© 2025 جميع الحقوق محفوظة - موقع إرث</p>
+    <p id="clock" class="footer-clock"></p>
+</div>
+</footer>
+<div id="custom-popup" class="popup-hidden">
+  <div class="popup-box">
+      
+      <h3 id="popup-title"></h3>
+      <hr class="popup-divider">
+      
+      <p id="popup-message"></p>
+
+      <div id="popup-buttons">
+        <button id="popup-ok">موافق</button>
+        <button id="popup-cancel" class="popup-confirm">إلغاء</button>
+      </div>
+  </div>
+</div>
+<button id="backToTop">↑</button>
+</body>
+</html>

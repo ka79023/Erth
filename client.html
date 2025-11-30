@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة العميل | إرث</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+</head>
+<body class="page-client">
+
+<div class="top-vision">
+  <p>في إرث نسعى للحفاظ على التراث السعودي الأصيل وإبرازه بروحٍ حديثةٍ تجمع بين عبق الماضي وابتكار الحاضر.</p>
+</div>
+
+<header>
+  <div class="logo-container">
+      <a href="index.html"> <img src="images/erth-logo.png" alt="شعار إرث" class="logo"> </a>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="provider.html">مزود الخدمة</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a class="active" href="client.html">العميل</a></li>
+    </ul>
+  </nav>
+</header>
+
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li aria-current="page">لوحة العميل</li>
+  </ol>
+</nav>
+
+<main class="container">
+  <h1>لوحة العميل</h1>
+
+  <section class="card">
+  <h2 class="sr-only">طلباتي السابقة</h2>
+  <h2>طلباتي السابقة</h2>
+  <div class="requests-table-wrapper">
+    <p id="prevReqHelp" class="sr-only">
+      جدول الطلبات السابقة: يتضمن اسم الخدمة، تاريخ الطلب، التكلفة والحالة وإجراءات الإدارة.
+    </p>
+    <table class="requests-table" aria-describedby="prevReqHelp">
+      <thead>
+        <tr>
+          <th scope="col">الخدمة</th>
+          <th scope="col">تاريخ الطلب</th>
+          <th scope="col">التكلفة (ر.س)</th>
+          <th scope="col">الحالة</th>
+          <th scope="col">إجراءات</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- قيد الانتظار -->
+        <tr data-order-id="najd-dance-2025-10-05">
+    <td>درس العرضة النجديّة</td>
+    <td><time datetime="2025-10-05">05 أكتوبر 2025</time></td>
+    <td>180</td>
+    <td>
+      <span class="status-badge status-pending">قيد الانتظار</span>
+    </td>
+    <td class="actions">
+      <a class="btn btn-ghost btn--sm" href="cancel.html">إلغاء الطلب</a>
+    </td>
+  </tr>
+        <!-- مكتمل -->
+        <tr>
+          <td>جولة الجنوب التراثية</td>
+          <td><time datetime="2025-09-25">25 سبتمبر 2025</time></td>
+          <td>250</td>
+          <td><span class="status-badge status-completed">مكتمل</span></td>
+          <td class="actions">
+            <a class="btn btn-ghost btn--sm" href="evaluate.html">قيّم الخدمة</a>
+          </td>
+        </tr>
+
+        <!-- مرفوض -->
+        <tr>
+          <td>دورة العجوة الحجازية</td>
+          <td><time datetime="2025-09-20">20 سبتمبر 2025</time></td>
+          <td>220</td>
+          <td><span class="status-badge status-declined">مرفوض</span></td>
+          <td class="actions">
+            <a class="btn btn-ghost btn--sm" href="request.html">إعادة الجدولة</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+  <section class="card">
+  <h2 class="sr-only">إجراءات سريعة</h2>
+  <h2>إجراءات سريعة</h2>
+
+  <div class="quick-actions">
+    <!-- تقييم خدمة -->
+    <a class="qa-tile is-hejazi" href="evaluate.html">
+      <span class="qa-icon" aria-hidden="true">
+        <!-- Star SVG -->
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+          <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>
+      </span>
+      <span class="qa-text">
+        <span class="qa-title">تقييم خدمة</span>
+        <span class="qa-sub">شارك تجربتك في دقيقتين</span>
+      </span>
+    </a>
+
+    <!-- طلب خدمة جديدة -->
+    <a class="qa-tile is-najdi" href="request.html">
+      <span class="qa-icon" aria-hidden="true">
+        <!-- Form/Note SVG -->
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 2 4 4h-4zM8 13h8v2H8zm0 4h5v2H8zm0-8h5v2H8z"/>
+        </svg>
+      </span>
+      <span class="qa-text">
+        <span class="qa-title">طلب خدمة جديدة</span>
+        <span class="qa-sub">اختَر الخدمة وحدّد التاريخ</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+
+  <!--تقدّم الدورات -->
+  <section class="card">
+  <h2 class="sr-only">تقدم دوراتي</h2>
+    <h2>تقدّم دوراتي</h2>
+    <!-- PROGRESS BARS -->
+<ul class="prog-list">
+  <!-- Hejazi / Ajwa -->
+  <li class="prog-item is-hejazi" style="--val:40">
+    <div class="prog-head">
+      <span class="prog-title">دورة العجوة الحجازية</span>
+      <span class="prog-val" aria-hidden="true">40٪</span>
+    </div>
+    <div class="prog-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40" aria-label="تقدّم دورة العجوة">
+      <span class="prog-fill"></span>
+    </div>
+    <small class="prog-meta">آخر تحديث: هذا الأسبوع • 3/7 دروس</small>
+  </li>
+
+  <!-- Najdi / Dance -->
+  <li class="prog-item is-najdi" style="--val:70">
+    <div class="prog-head">
+      <span class="prog-title">أساسيات العرضة</span>
+      <span class="prog-val" aria-hidden="true">70٪</span>
+    </div>
+    <div class="prog-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" aria-label="تقدّم أساسيات العرضة">
+      <span class="prog-fill"></span>
+    </div>
+    <small class="prog-meta">آخر تحديث: أمس • 7/10 دروس</small>
+  </li>
+
+  <!-- Southern -->
+  <li class="prog-item is-southern" style="--val:55">
+    <div class="prog-head">
+      <span class="prog-title">جولة الجنوب المتقدمة</span>
+      <span class="prog-val" aria-hidden="true">55٪</span>
+    </div>
+    <div class="prog-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55" aria-label="تقدّم جولة الجنوب">
+      <span class="prog-fill"></span>
+    </div>
+    <small class="prog-meta">آخر تحديث: اليوم • 11/20 محطة</small>
+  </li>
+</ul>
+
+<!-- RINGS (visual summary) -->
+<div class="prog-rings">
+  <div class="ring is-hejazi" style="--val:40" role="img" aria-label="دورة العجوة 40 بالمئة">
+    <span class="ring-num">40%</span>
+    <span class="ring-label">العجوة</span>
+  </div>
+  <div class="ring is-najdi" style="--val:70" role="img" aria-label="أساسيات العرضة 70 بالمئة">
+    <span class="ring-num">70%</span>
+    <span class="ring-label">العرضة</span>
+  </div>
+  <div class="ring is-southern" style="--val:55" role="img" aria-label="جولة الجنوب 55 بالمئة">
+    <span class="ring-num">55%</span>
+    <span class="ring-label">الجنوب</span>
+  </div>
+</div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-titles">
+   
+  </div>
+
+  <div class="social-icons">
+    <img src="images/x.png" alt="تويتر" style="margin-top:10px ;">
+    <img src="images/insta.png" alt="إنستغرام" style="margin-top:10px ;">
+    <img src="images/what.png" alt="واتساب" style="margin-top:10px ;">
+  </div>
+   <hr>
+    <h3>
+  <a href="#">الأسئلة الشائعة</a> <br>
+
+  <a href="#">تواصل معنا</a>
+</h3>
+<div class="footer-bottom">
+    <p class="rights">© 2025 جميع الحقوق محفوظة - موقع إرث</p>
+    <p id="clock" class="footer-clock"></p>
+</div>
+</footer>
+<div id="custom-popup" class="popup-hidden">
+  <div class="popup-box">
+      
+      <h3 id="popup-title"></h3>
+      <hr class="popup-divider">
+      
+      <p id="popup-message"></p>
+
+      <div id="popup-buttons">
+        <button id="popup-ok">موافق</button>
+        <button id="popup-cancel" class="popup-confirm">إلغاء</button>
+      </div>
+  </div>
+</div>
+<button id="backToTop">↑</button>
+</body>
+</html>

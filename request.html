@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>طلب خدمة جديدة | إرث</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+</head>
+<body class="page-client">
+
+<div class="top-vision">
+  <p>اختر التجربة التراثية التي تناسبك واملأ النموذج لإرسال طلبك.</p>
+</div>
+
+<header>
+  <div class="logo-container">
+      <a href="index.html"><img src="images/erth-logo.png" alt="شعار إرث" class="logo"></a>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="provider.html">مزود الخدمة</a></li>
+      <li><a href="services.html">الخدمات</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="client.html">العميل</a></li>
+    </ul>
+  </nav>
+</header>
+
+<nav aria-label="breadcrumb" class="breadcrumbs">
+  <ol>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="client.html">لوحة العميل</a></li>
+    <li aria-current="page">طلب خدمة</li>
+  </ol>
+</nav>
+
+<main class="container">
+  <h1>طلب خدمة جديدة</h1>
+
+  <section class="card">
+  <h2 class="sr-only">طلب خدمة جديدة</h2>
+    <form class="form" action="#" method="POST">
+      <!-- اختيار الخدمة (قائمة منسدلة) — مطلب صريح -->
+      <div class="form-field">
+        <label for="serviceSelect">الخدمة</label>
+        <select id="serviceSelect" name="service">
+          <option value="" selected disabled>— اختر خدمة —</option>
+          <optgroup label="نجد">
+            <option value="najd-dance">درس العرضة النجديّة</option>
+          </optgroup>
+          <optgroup label="الحجاز">
+            <option value="hejazi-ajwa">دورة العجوة الحجازية</option>
+          </optgroup>
+          <optgroup label="الجنوب">
+            <option value="south-tour">جولة الجنوب التراثية</option>
+          </optgroup>
+		  <optgroup label="الخدمة الخاصة">
+    <option value="special-service">حياكة التراث</option>
+  </optgroup>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="customerName">اسم العميل</label>
+        <input id="customerName" name="customerName" type="text" placeholder="اسمك الثنائي">
+      </div>
+
+      <div class="form-field">
+        <label for="dueDate">التاريخ</label>
+        <input id="dueDate" name="dueDate" type="date">
+      </div>
+
+      <div class="form-field">
+        <label for="requestDesc">وصف الطلب</label>
+        <textarea id="requestDesc" name="description" rows="5" placeholder="أخبرنا بالتفاصيل التي تهمك"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn" type="submit">إرسال الطلب</button>
+        <a class="btn btn-ghost" href="client.html">رجوع</a>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-titles">
+   
+  </div>
+
+  <div class="social-icons">
+    <img src="images/x.png" alt="تويتر" style="margin-top:10px ;">
+    <img src="images/insta.png" alt="إنستغرام" style="margin-top:10px ;">
+    <img src="images/what.png" alt="واتساب" style="margin-top:10px ;">
+  </div>
+   <hr>
+    <h3>
+  <a href="#">الأسئلة الشائعة</a> <br>
+
+  <a href="#">تواصل معنا</a>
+</h3>
+<div class="footer-bottom">
+    <p class="rights">© 2025 جميع الحقوق محفوظة - موقع إرث</p>
+    <p id="clock" class="footer-clock"></p>
+</div>
+</footer>
+<div id="custom-popup" class="popup-hidden">
+  <div class="popup-box">
+      
+      <h3 id="popup-title"></h3>
+      <hr class="popup-divider">
+      
+      <p id="popup-message"></p>
+
+      <div id="popup-buttons">
+        <button id="popup-ok">موافق</button>
+        <button id="popup-cancel" class="popup-confirm">إلغاء</button>
+      </div>
+  </div>
+</div>
+<button id="backToTop">↑</button>
+</body>
+</html>
